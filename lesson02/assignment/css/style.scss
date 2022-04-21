@@ -4,3 +4,35 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+.card {
+  border: 2.5rem solid darken($gray, 15%);
+  border-radius: 5px;
+  padding: 2rem;
+
+}
+
+.outer-profile {
+  float: left;
+  margin-right: 2rem;
+}
+
+.inner-profile {
+  background-color: $gray;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+  & p, h3 {
+    flex: 50%;
+    color: darken($gray, 50%);
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+.headshot {
+  height: 225px;
+  border-top-left-radius: 50% 50%;
+  border-top-right-radius: 50% 50%;
+  border-bottom-right-radius: 50% 50%;
+  border-bottom-left-radius: 50% 50%;
+}
