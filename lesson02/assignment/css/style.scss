@@ -5,9 +5,10 @@
 @import 'components.content';
 
 .card {
-  border: 3rem solid darken($gray, 10%);
+  border: 3.25rem solid darken($gray, 15%);
   border-radius: 5px;
   padding: 3rem;
+  width: 50%;
 
 }
 
@@ -23,14 +24,16 @@
 
 .inner-profile {
   background-color: $gray;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: auto auto;
   padding: 2rem;
   & p, h3 {
-    flex: 50%;
     color: darken($gray, 50%);
     margin: 0;
     margin-bottom: 1rem;
+  }
+  & p {
+    margin-top: 3px;
   }
 }
 
