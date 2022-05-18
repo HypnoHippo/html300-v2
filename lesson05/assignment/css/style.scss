@@ -4,3 +4,67 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+body {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  grid-template-areas:
+    'header header header header header'
+    'nav nav nav nav nav'
+    'sidebar sidebar main main main'
+    'sidebar sidebar main main main'
+    'sidebar sidebar main main main'
+    'sidebar sidebar main main main'
+    'footer footer footer footer footer';
+    text-align: center;
+}
+
+.header {
+  background-color: $red;
+  padding: 2rem;
+  width: 100%;
+  margin: auto;
+  grid-area: header;
+}
+
+.nav {
+  grid-area: nav;
+  background: $orange;
+  padding: 1rem;
+  max-width: 1920px;
+  &__list {
+    padding: 50px 0 0 0;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+  }
+  &__item {
+    display: inline-block;
+    font-size: 20px;
+    margin-right: 2rem;
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+  &__link {
+    color: $white;
+    text-decoration: none;
+  }
+}
+.sidebar {
+  grid-area: sidebar;
+  background-color: $yellow;
+  padding: 2rem;
+}
+
+.main {
+  background-color: $green;
+  grid-area: main;
+}
+
+.footer {
+  padding: 2rem;
+  background-color: $blue;
+  grid-area: footer;
+}
