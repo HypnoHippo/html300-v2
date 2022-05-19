@@ -1,0 +1,49 @@
+// Declaring variables and mixins
+$font-fam: sans-serif;
+$black: #30323D;
+$green: #95BF74;
+
+@mixin link-style{
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  font-family: $font-fam;
+  padding-top: 1.5625rem;
+}
+
+// Styling the back of the button
+.btn-bottom {
+  background: $green;
+  border-radius: 3px;
+  height: 4.6875rem;
+  margin: 2rem;
+  position: absolute;
+  transition: transform 0.75s ease;
+  width: 9.375rem;
+}
+
+// Styling the front clickable part of the button
+.btn-top {
+  background: $black;
+  border-radius: 3px;
+  height: 50px;
+  margin: 2rem;
+  transition: transform 0.75s ease;
+  position: absolute;
+  width: 9.375rem;
+
+  // Adding hover effect
+  &:hover {
+      transform: rotate(360deg) translate(10px, -10px);
+
+  }
+}
+
+// Fixing default link styling
+a {
+  @include link-style;
+
+  &:visited {
+    @include link-style;
+  }
+}
