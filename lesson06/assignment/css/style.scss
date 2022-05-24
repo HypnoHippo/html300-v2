@@ -1,16 +1,40 @@
 // Import partials here
 @import "../node_modules/bootstrap/scss/bootstrap";
-@import 'base.normalize';
-@import 'settings.variables';
-@import 'settings.responsive';
-@import 'components.content';
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/code";
+@import "../node_modules/bootstrap/scss/grid";
 
 .nav-item:hover {
-  background-color: lighten($cyan, 10%);
+  background-image: linear-gradient( 109.6deg,  rgba(61,245,167,1) 11.2%, rgba(9,111,224,1) 91.1% );
 }
-
-$enable-responsive-font-sizes: true;
 
 #resize {
   max-width: 720px !important;
+}
+
+@include media-breakpoint-down(sm) {
+  #mobile-grid-fix {
+    height: 19.6875rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  #mobile-grid-fix {
+
+  }
+  #desktop-grid-fix {
+    flex-wrap: nowrap;
+    & > div {
+      margin: 0 0.5rem;
+      &:first-child {
+        margin-left: -23px;
+      }
+    }
+  }
 }
